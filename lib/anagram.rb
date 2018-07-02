@@ -1,3 +1,4 @@
+require 'pry'
 class Anagram
   attr_accessor :word
   def initialize(word)
@@ -7,9 +8,11 @@ class Anagram
     sorted_word = self.word
     sorted_word.chars.sort!
     word_list.each do |da_word|
+      binding.pry
       if da_word.chars.sort == sorted_word
         return da_word
       end
     end
   end
+
 end
